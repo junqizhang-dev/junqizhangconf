@@ -1,0 +1,35 @@
+" added by junqizhang
+" do not load the folloing bundles
+"set runtimepath-=~/.vim/bundle/nerdtree
+set runtimepath-=~/.vim/bundle/neocomplete.vim
+set runtimepath-=~/.vim/bundle/YouCompleteMe
+
+set nowrapscan
+
+"color desertEx
+color molokai
+set syntax=perl
+
+"setting for airline
+let g:airline_theme='molokai'
+
+" setting for nerdtree
+" ==0 means nerdtree wont close itself after open a new file
+let NERDTreeQuitOnOpen=0
+
+"the following is for ag
+"noremap <Leader>a  :Ag! "\b<C-R><C-W>\b"<CR>:cw<CR>
+let g:ag_working_path_mode="r"
+
+nnoremap <leader>g :LAg <C-R><C-W><CR>
+"vnoremap <leader>g "vy:<C-u>LAg <C-r>='"'.substitute(escape(@v,g:eregex_meta_chars),"\n",'\\n','g').'"'<CR> <C-R>=AgPrePath()<CR>"
+"end
+
+"the following is for status bar
+set laststatus=2
+set statusline=%f\ %h%m%r\ \[%{&ff}:%{&fenc}:%Y]\ %<%{getcwd()}\ %=%n%-10{((&expandtab)?'-ET'.&tabstop:'-TAB')}\ %=%-10.(%l,%c%V%)\ %P
+"end
+
+"the following is for ctrlp
+nmap <leader>lw :CtrlP<CR><C-\>w
+
