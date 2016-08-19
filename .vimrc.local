@@ -6,8 +6,8 @@ set runtimepath-=~/.vim/bundle/YouCompleteMe
 
 set nowrapscan
 
-"color desertEx
-color molokai
+color desert256
+"color molokai
 set syntax=perl
 
 "setting for airline
