@@ -12,4 +12,5 @@ alias gl="git log --graph --abbrev-commit --decorate --format=format:'%C(bold bl
 
 #display ip in shell prompt
 LOCAL_IP=$(ifconfig  | grep -A1 "eth1" |grep 'inet '| awk '{print $2}')
-PS1=""$LOCAL_IP""$PS1
+MY_USER_NAME=$(whoami)
+PS1="$MY_USER_NAME@"$LOCAL_IP""$PS1
