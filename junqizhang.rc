@@ -14,3 +14,8 @@ alias gl="git log --graph --abbrev-commit --decorate --format=format:'%C(bold bl
 LOCAL_IP=$(ifconfig  | grep -A1 "eth1" |grep 'inet '| awk '{print $2}')
 MY_USER_NAME=$(whoami)
 PS1="$MY_USER_NAME@"$LOCAL_IP""$PS1
+
+
+#configure for autojump
+[[ -s /root/.autojump/etc/profile.d/autojump.sh  ]] && source /root/.autojump/etc/profile.d/autojump.sh
+autoload -U compinit && compinit -u
