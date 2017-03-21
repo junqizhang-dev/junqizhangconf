@@ -7,8 +7,8 @@ set runtimepath-=~/.vim/bundle/YouCompleteMe
 set nowrapscan
 
 "color desert256
-color ir_black
-"color molokai
+"color ir_black
+color molokai
 "set syntax=perl
 
 "setting for airline
@@ -27,6 +27,13 @@ if executable('ag')
     let g:ackprg = 'ag --vimgrep'
 endif
 let g:ackprg = 'ag --vimgrep'
+
+"seting for quickfix
+nnoremap <Leader>n :cn<CR>
+nnoremap <Leader>p :cp<CR>
+
+cnoreabbrev Ack Ack!
+nnoremap <Leader>a :Ack!<Space>
 
 nnoremap <leader>g :LAg <C-R><C-W><CR>
 "vnoremap <leader>g "vy:<C-u>LAg <C-r>='"'.substitute(escape(@v,g:eregex_meta_chars),"\n",'\\n','g').'"'<CR> <C-R>=AgPrePath()<CR>"
