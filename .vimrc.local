@@ -6,9 +6,10 @@ set runtimepath-=~/.vim/bundle/YouCompleteMe
 
 set nowrapscan
 
-color desert256
+"color desert256
+color ir_black
 "color molokai
-set syntax=perl
+"set syntax=perl
 
 "setting for airline
 let g:airline_theme='molokai'
@@ -20,6 +21,12 @@ let NERDTreeQuitOnOpen=0
 "the following is for ag
 "noremap <Leader>a  :Ag! "\b<C-R><C-W>\b"<CR>:cw<CR>
 let g:ag_working_path_mode="r"
+
+"setting for Ack
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+endif
+let g:ackprg = 'ag --vimgrep'
 
 nnoremap <leader>g :LAg <C-R><C-W><CR>
 "vnoremap <leader>g "vy:<C-u>LAg <C-r>='"'.substitute(escape(@v,g:eregex_meta_chars),"\n",'\\n','g').'"'<CR> <C-R>=AgPrePath()<CR>"
