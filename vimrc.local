@@ -5,10 +5,11 @@ set runtimepath-=~/.vim/bundle/neocomplete.vim
 set runtimepath-=~/.vim/bundle/YouCompleteMe
 
 set nowrapscan
+set nofoldenable
 
-"color desert256
+color desert256
 "color ir_black
-color molokai
+"color molokai
 "set syntax=perl
 
 "setting for airline
