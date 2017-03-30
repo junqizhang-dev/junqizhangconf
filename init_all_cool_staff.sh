@@ -56,7 +56,7 @@ init_for_mac()
 
 init_for_rc()
 {
-    echo "source /home/junqizhang/junqizhangconf/junqizhang.rc" >> ~/.zshrc
+    echo "source /home/junqizhang/workspace/junqizhangconf/junqizhang.rc" >> ~/.zshrc
     source ~/.zshrc
 
     ln -s vimrc.bundles.local ~/.vimrc.bundles.local
