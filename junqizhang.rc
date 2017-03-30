@@ -5,6 +5,7 @@
 
 alias ..="cd .."
 alias grep="grep --color=auto"
+alias publicip="curl ipecho.net/plain; echo"
 
 #for pretty git log
 #alias gl1="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
@@ -17,7 +18,9 @@ LOCAL_IP=$(ifconfig  | grep -A1 "eth0" |grep 'inet '| awk '{print $2}' | awk -F"
 MY_USER_NAME=$(whoami)
 PS1="$MY_USER_NAME@"$LOCAL_IP""$PS1
 
-
 #configure for autojump
 [[ -s /root/.autojump/etc/profile.d/autojump.sh  ]] && source /root/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
+
+#change homebrew Bottles source
+export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
