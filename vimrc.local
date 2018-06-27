@@ -7,6 +7,12 @@ set runtimepath-=~/.vim/bundle/YouCompleteMe
 set nowrapscan
 set nofoldenable
 
+"do not fold
+set nofoldenable
+if &diff                             " only for diff mode/vimdiff
+    set diffopt=filler,context:1000000 " filler is default and inserts empty lines for sync
+endif
+
 color desert256
 "color ir_black
 "color molokai
@@ -47,4 +53,10 @@ set statusline=%f\ %h%m%r\ \[%{&ff}:%{&fenc}:%Y]\ %<%{getcwd()}\ %=%n%-10{((&exp
 
 "the following is for ctrlp
 nmap <leader>lw :CtrlP<CR><C-\>w
+
+"the setting for hjkl
+nnoremap H h
+nnoremap J j
+nnoremap K k
+nnoremap L l
 
